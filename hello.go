@@ -21,6 +21,35 @@ func main() {
 	//Basic array stuff
 	var array [5]int //index start at 0 like usual
 	array[3] = 2345678
-	fmt.Println(array)
+	shorthandArray := [5]int{5, 4, 3, 2, 1}
+	fmt.Println(array, shorthandArray)
 
+	//solution fixed lenght array: Slices -> no fixed lenght
+	slice := []int{435, 5467, 78, 2, 1}
+	fmt.Println(slice)
+	slice = append(slice, 15) //does not append slice, but returns new one
+	fmt.Println(slice)
+
+	// Maps
+	// map[type keys]type values in map
+	vertices := make(map[string]int)
+	vertices["pizza"] = 10
+	vertices["fruit"] = 15
+	vertices["stroopwafel"] = 7
+	fmt.Println(vertices)
+	delete(vertices, "pizza")
+	fmt.Println(vertices)
+
+	// For loop = only loop in go
+	for i := 10; i > 3; i-- {
+		fmt.Println(i)
+	}
+	// for doubles as a while loop
+	while := 0
+	for while < 5 {
+		fmt.Println(while)
+		while++
+	}
+
+	// need to continue with range
 }
