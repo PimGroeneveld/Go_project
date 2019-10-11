@@ -1,6 +1,14 @@
 package main // package to be able to exec file
 
-import "fmt"
+import (
+	"fmt"
+)
+
+//sort of the "object"
+type person struct {
+	name string
+	age  int
+}
 
 func main() {
 	var x int = 5 // "long" way
@@ -52,4 +60,21 @@ func main() {
 	}
 
 	// need to continue with range
+	arr := []string{"a", "b", "c"}
+
+	for index, value := range arr {
+		fmt.Println("index:", index, "value:", value)
+	}
+
+	// calling func sum
+	result := sum(4, 6)
+	fmt.Println(result)
 }
+
+//func name (params) return type { }
+func sum(x int, y int) int {
+	return x + y
+}
+
+// look into pointers
+// errors can be imported and then used as return type (as replacement for Exceptions)
